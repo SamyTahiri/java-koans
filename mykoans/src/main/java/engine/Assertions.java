@@ -271,7 +271,7 @@ public class Assertions {
             if (actual == null) {
                 p.println(red(EXPECTED_TO_RETURN_ANONYMOUS_BUT_RETURNED_NULL, code(res.resultExpressionSourceCode)));
                 return false;
-            } else if (actual.getClass().getSimpleName().contains("$$Lambda$")) { // Kind of hacky, but only way as far as I know
+            } else if (actual.getClass().getSimpleName().contains("$$Lambda")) { // Kind of hacky, but only way as far as I know
                 p.println(red(EXPECTED_TO_RETURN_ANONYMOUS_BUT_RETURNED_LAMBDA, code(res.resultExpressionSourceCode)));
                 return false;
             } else if (!actual.getClass().isAnonymousClass()) {
